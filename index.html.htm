@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVHS Interactive Map</title>
+
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            transition: opacity 0.8s ease;
+        }
+
+        body.fade-out {
+            opacity: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* GLOBAL ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeZoom {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url('images/ecm.school.jpg') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+            animation: fadeZoom 1.2s ease-out forwards;
+        }
+
+        .hero-overlay {
+            background: rgba(0,0,0,0.55);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 700px;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .hero button {
+            background: #0055a5;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            font-weight: 500;
+        }
+
+        .hero button:hover {
+            background: #0070d1;
+            transform: translateY(-3px);
+        }
+
+        /* THREE PILLARS SECTION */
+        .pillars {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        .pillars h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.4rem;
+            color: #0055a5;
+            letter-spacing: 0.5px;
+        }
+
+        .pillar-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .pillar {
+            flex: 1;
+            min-width: 280px;
+            background: #f7f7f7;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            animation: fadeIn 1.4s ease-out forwards;
+        }
+
+        .pillar:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .pillar h3 {
+            margin-top: 0;
+            color: #0055a5;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .pillar p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.3rem; }
+            .hero p { font-size: 1rem; }
+            .pillars h2 { font-size: 2rem; }
+        }
+    </style>
+
+    <script>
+        function goToBlocks() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'block.htm';
+            }, 800);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Canley Vale High School</h1>
+            <p>Interactive Map - Eric, Henry, Lincoln, Jamie</p>
+            <button onclick="goToBlocks()">Next</button>
+        </div>
+    </section>
+
+    <!-- THREE PILLARS -->
+    <section class="pillars">
+        <h2>The Difference</h2>
+
+        <div class="pillar-container">
+            <div class="pillar">
+                <h3>A Place to Grow</h3>
+                <p>Every student is known, supported, and challenged. From day one, we create a safe and encouraging environment where learners thrive.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Learning Beyond the Classroom</h3>
+                <p>We offer diverse subjects, enrichment programs, and leadership opportunities that help students discover their strengths and passions.</p>
+            </div>
+
+            <div class="pillar">
+                <h3>Connected Community</h3>
+                <p>We work closely with families and local partners to enrich learning and build a strong, supportive school community.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
