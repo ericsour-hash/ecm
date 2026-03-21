@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Block</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #0055a5;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: #0055a5;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+
+        .sidebar a.active {
+            background: #e6f1ff;
+            font-weight: 600;
+        }
+
+        .sidebar a:hover {
+            background: #d9eaff;
+        }
+
+        /* Main content */
+        .content {
+            flex: 1;
+        }
+
+        .content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: #0055a5;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: #e6f1ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 5px solid #0055a5;
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            background: #0055a5;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background: #0070d1;
+        }
+
+        .block-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>CVHS Blocks</h3>
+        <a href="A.htm">A Block</a>
+        <a href="B.htm">B Block</a>
+        <a href="D.htm">D Block</a>
+        <a class="active" href="E.htm">E Block</a>
+        <a href="F.htm">F Block</a>
+        <a href="L.htm">L Block</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>E Block</h1>
+
+        <div class="info-box">
+            <p><strong>Welcome to E Block!</strong></p>
+            <p>This block contains classrooms, learning spaces, and key facilities used by students throughout the day.</p>
+            <p>Click below to return to the main blocks page.</p>
+
+            <a class="button" href="block.htm">Back to Blocks</a>
+        </div>
+
+        <img src="images/E.jpg" class="block-image" alt="E Block">
+
+<!-- Join Interactive Button -->
+<div class="button-container">
+    <a class="button" href="https://jokktrot.itch.io/canley-vale-high-school-map-by-jamie" target="_blank">
+        Join Interactive
+    </a>
+</div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
